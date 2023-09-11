@@ -20,43 +20,33 @@ namespace GeometricFigure
         {
             get
             {
-                double sideData = 0;
+                double result = 0;
                 if (this.Width < 0 || this.Height < 0)
                 {
                     Console.WriteLine("El perímetro no puede ser negativo.");
                 }
                 else
                 {
-                    sideData = (2 * this.Width) + (2 * this.Height);
+                    result = (2 * this.Width) + (2 * this.Height);
                 }
-                return sideData;
+                return result;
             }
-            //set
-            //{
-            //    if (value < 0)
-            //    {
-            //        Console.WriteLine("El perímetro no puede ser negativo.");
-            //    }
-            //    else
-            //    {
-            //        this.Width = value / 2;
-            //    }
-            //}
+            
         }
         public override double Area
         {
             get
             {
-                double sideData = 0;
+                double result = 0;
                 if (this.Width < 0 || this.Height < 0)
                 {
                     Console.WriteLine("El área no puede ser negativa.");
                 }
                 else
                 {
-                    sideData = this.Width * this.Height;
+                    result = this.Width * this.Height;
                 }
-                return sideData;
+                return result;
             }
         }
         public void ModifyWidth(double Width)

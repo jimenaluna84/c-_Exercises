@@ -8,8 +8,8 @@ namespace GeometricFigure
 {
     class Rhombus : GeometricFigure
     {
-       public double MajorDiagonal { get; set; }
-       public double MinorDiagonal { get; set; }
+        public double MajorDiagonal { get; set; }
+        public double MinorDiagonal { get; set; }
         public Rhombus(int MajorDiagonal, int MinorDiagonal, string UnitOfMeasurement)
         : base("Rhombus", Convert.ToString(UnitOfMeasurement))
         {
@@ -22,93 +22,54 @@ namespace GeometricFigure
         {
             get
             {
-                double sideData = 0;
+                double result = 0;
                 if (MajorDiagonal < 0 || MinorDiagonal < 0)
                 {
-                    Console.WriteLine("El perímetro no puede ser negativo.");
+                    Console.WriteLine("The Area should not negative.");
                 }
                 else
                 {
                     double Side1 = Math.Pow(((MajorDiagonal) / 2), 2);
                     double Side2 = Math.Pow(((MinorDiagonal) / 2), 2);
-                    sideData = Convert.ToInt32(4 * (Math.Sqrt(Side1 + Side2)));
+                    result = 4 * (Math.Sqrt(Side1 + Side2));
                 }
-                return sideData;
+                return result;
             }
-            //set
-            //{
-            //    if (value < 0)
-            //    {
-            //        Console.WriteLine("El perímetro no puede ser negativo.");
-            //    }
-            //    else
-            //    {
-            //        _sideLength = value / 4;
-            //    }
-            //}
+
         }
         public override double Area
         {
             get
             {
-                double sideData = 0;
+                double result = 0;
                 if (MajorDiagonal < 0 || MinorDiagonal < 0)
                 {
-                    Console.WriteLine("El área no puede ser negativa.");
+                    Console.WriteLine("The Area should not negative.");
                 }
                 else
                 {
-                    sideData = (MajorDiagonal * MinorDiagonal) / 2;
+                    result = (MajorDiagonal * MinorDiagonal) / 2;
                 }
-                return sideData;
+                return result;
             }
 
-            //set
-            //{
-            //    if (value < 0)
-            //    {
-            //        Console.WriteLine("El área no puede ser negativa.");
-            //    }
-            //    else
-            //    {
-            //        _sideLength = Math.Sqrt(value);
-            //    }
-            //}
+
         }
 
-        //public override double CalculateArea()
-        //{
-        //    double Area = (MajorDiagonal * MinorDiagonal) / 2;
-        //    return Area;
-        //}
 
-        //public override double CalculatePerimeter()
-        //{
-
-        //    double Side1 = Math.Pow(((MajorDiagonal) / 2), 2);
-        //    double Side2 = Math.Pow(((MinorDiagonal) / 2), 2);
-        //    int Perimeter = Convert.ToInt32(4 * (Math.Sqrt(Side1 + Side2)));
-        //    return Perimeter;
-        //}
-
-
-
-        //public override void DisplayFigureInfo()
-        //{
-        //    base.DisplayFigureInfo();
-        //    Console.WriteLine($"MajorDiagonal: {MajorDiagonal} {UnitOfMeasurement}");
-        //    Console.WriteLine($"MinorDiagonal: {MinorDiagonal} {UnitOfMeasurement}");
-        //    Console.WriteLine($"Area: {CalculateArea()} Rhombus {UnitOfMeasurement}");
-        //    Console.WriteLine($"Perimeter: {CalculatePerimeter()} {UnitOfMeasurement}");
-        //    System.Console.WriteLine();
-        //}
-
-        public void ModifyData(int MajorDiagonal, int MinorDiagonal, string UnitOfMeasurement)
+        public void ModifyMajorDiagonal(double MajorDiagonal)
         {
             this.MajorDiagonal = MajorDiagonal;
+
+        }
+        public void ModifyMinorDiagonal(double MinorDiagonal)
+        {
             this.MinorDiagonal = MinorDiagonal;
+
+        }
+        public void ModifyUnitOfMeasurement(string UnitOfMeasurement)
+        {
             this.UnitOfMeasurement = UnitOfMeasurement;
         }
-
     }
 }

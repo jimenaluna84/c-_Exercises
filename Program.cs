@@ -7,7 +7,7 @@ namespace GeometricFigure
         static void Main()
         {
 
-            Square square = new Square(2, "cm");
+            Square square = new(2, "cm");
             ConsoleViewManager.DisplayFigureInfo(square);
             square.ModifySideLength(5);
             square.ModifyUnitOfMeasurement("mm");
@@ -28,7 +28,9 @@ namespace GeometricFigure
 
             Rhombus rhombus = new(20, 10, "cm");
             ConsoleViewManager.DisplayFigureInfo(rhombus);
-            rhombus.ModifyData(8, 2, "cm");
+            rhombus.ModifyMajorDiagonal(5);
+            rhombus.ModifyMinorDiagonal(4);
+            rhombus.ModifyUnitOfMeasurement("mm");
             ConsoleViewManager.DisplayFigureInfo(rhombus);
 
             Circle circle = new(20, "cm");

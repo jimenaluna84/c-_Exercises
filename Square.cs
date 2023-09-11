@@ -25,59 +25,33 @@ namespace GeometricFigure
         }
 
 
-        public override double Perimeter 
+        public override double Perimeter
         {
-            get {
-                double sideData = 0;
-                if (_sideLength < 0)
-                {
-                    Console.WriteLine("El perímetro no puede ser negativo.");
-                }
-                else
-                {
-                    sideData = 4 * _sideLength;
-                }
-                return sideData; 
-            }
-            set
+            get
             {
-                if (value < 0)
+                double result = 0;
+                if (ConsoleViewManager.IsValid(_sideLength))
                 {
-                    Console.WriteLine("El perímetro no puede ser negativo.");
+                    result = 4 * _sideLength;
                 }
-                else
-                {
-                    _sideLength = value / 4;
-                }
+                return result;
             }
+           
+
         }
         public override double Area
         {
             get
             {
-                double sideData = 0;
-                if (_sideLength < 0)
+                double result = 0;
+                if (ConsoleViewManager.IsValid(_sideLength))
                 {
-                    Console.WriteLine("El área no puede ser negativa.");
+                    result = _sideLength * _sideLength;
                 }
-                else
-                {
-                    sideData = _sideLength * _sideLength;
-                }
-                return sideData;
+                return result;
             }
 
-            set
-            {
-                if (value < 0)
-                {
-                    Console.WriteLine("El área no puede ser negativa.");
-                }
-                else
-                {
-                    _sideLength = Math.Sqrt(value);
-                }
-            }
+
         }
         public void ModifySideLength(double SideLength)
         {
