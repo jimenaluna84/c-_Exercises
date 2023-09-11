@@ -14,7 +14,7 @@ namespace GeometricFigure
 
         {
             System.Console.WriteLine("6************************************");
-            Console.WriteLine($"----Figure: {figure.GeomericFigureName}----");
+            Console.WriteLine($"----Figure: {figure.GeometricFigureName}----");
             Console.WriteLine("Area: " + figure.Area + " " +figure.UnitOfMeasurement + "\n" + "Perimeter: " + figure.Perimeter + " " + figure.UnitOfMeasurement);
         }
     }
