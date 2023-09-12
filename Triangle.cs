@@ -30,45 +30,27 @@ namespace GeometricFigure
         {
             get
             {
-                double sideData = 0;
-                if (_baseLength < 0 || _height <0)
-                {
-                    Console.WriteLine("El perímetro no puede ser negativo.");
-                }
-                else
+                double result = 0;
+                if (ConsoleViewManager.AreValid(_baseLength, _height))
                 {
                     double Side1 = Math.Pow(_baseLength, 2);
                     double Side2 = Math.Pow(_height, 2);
-                    sideData = _baseLength + _height + Math.Sqrt(Side1 + Side2);
+                    result = _baseLength + _height + Math.Sqrt(Side1 + Side2);
                 }
-                return sideData;
+                return result;
             }
-            //set
-            //{
-            //    if (value < 0)
-            //    {
-            //        Console.WriteLine("El perímetro no puede ser negativo.");
-            //    }
-            //    else
-            //    {
-            //        _baseLength = value;
-            //    }
-            //}
+            
         }
         public override double Area
         {
             get
             {
-                double sideData = 0;
-                if (_baseLength < 0 || _height < 0)
-                {
-                    Console.WriteLine("El área no puede ser negativa.");
+                double result = 0;
+                if (ConsoleViewManager.AreValid(_baseLength, _height))
+                    {
+                    result = (_baseLength * _height) / 2;
                 }
-                else
-                {
-                    sideData = (_baseLength * _height) / 2;
-                }
-                return sideData;
+                return result;
             }
         }
         public Triangle(double BaseLength, double Height, string UnitOfMeasurement)

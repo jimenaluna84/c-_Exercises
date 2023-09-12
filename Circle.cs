@@ -19,7 +19,7 @@ namespace GeometricFigure
             get { return _unitOfMeasurement; }
             set { _unitOfMeasurement = value; }
         }
-        public string GeomericFigureName
+        public string GeometricFigureName
         {
             get { return _name; }
             set { _name = value; } 
@@ -40,7 +40,7 @@ namespace GeometricFigure
 
         public Circle(int radius, string unitOfMeasurement)
         {
-            this._name = "Circulo";
+            this._name = "Circle";
             this.Radius = radius;
             this._unitOfMeasurement = unitOfMeasurement;
         }

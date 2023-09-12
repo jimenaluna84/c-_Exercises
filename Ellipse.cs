@@ -21,7 +21,7 @@ namespace GeometricFigure
             get { return _unitOfMeasurement; }
             set { _unitOfMeasurement = value; }
         }
-        public string GeomericFigureName
+        public string GeometricFigureName
         {
             get { return _name; }
             set { _name = value; }
@@ -44,7 +44,7 @@ namespace GeometricFigure
         }
         public Ellipse(double RadiusMajorAxis, double RadiusMinorAxis, string unitOfMeasurement)
         {
-            this.GeomericFigureName = "Elipse";
+            this.GeometricFigureName = "Ellipse";
             this.RadiusMajorAxis = RadiusMajorAxis;
             this.RadiusMinorAxis = RadiusMinorAxis;
             this.UnitOfMeasurement = unitOfMeasurement;
