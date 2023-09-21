@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercise_1", "Exercise_1.csproj", "{619B2BAE-BFD4-4592-A4BE-D98CBFEC0572}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecFlowGF", "..\SpecFlowGF\SpecFlowGF.csproj", "{64601D7F-A4A8-411D-9A9D-7AF4E000D35A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{619B2BAE-BFD4-4592-A4BE-D98CBFEC0572}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{619B2BAE-BFD4-4592-A4BE-D98CBFEC0572}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{619B2BAE-BFD4-4592-A4BE-D98CBFEC0572}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64601D7F-A4A8-411D-9A9D-7AF4E000D35A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64601D7F-A4A8-411D-9A9D-7AF4E000D35A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64601D7F-A4A8-411D-9A9D-7AF4E000D35A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64601D7F-A4A8-411D-9A9D-7AF4E000D35A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

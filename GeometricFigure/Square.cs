@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeometricFigure
+
+namespace GeometricFigureExercise
 {
-    class Square : GeometricFigure
+    public class Square : GeometricFigure
     {
         private double _sideLength;
         public double SideLength
@@ -24,7 +25,7 @@ namespace GeometricFigure
             this._sideLength = SideLength;
         }
 
-
+       
         public override double Perimeter
         {
             get
@@ -53,6 +54,9 @@ namespace GeometricFigure
 
 
         }
+
+        public double Side { get; }
+
         public void ModifySideLength(double SideLength)
         {
             this.SideLength = SideLength;

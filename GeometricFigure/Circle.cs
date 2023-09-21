@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeometricFigure
+namespace GeometricFigureExercise
 {
-    class Circle : IGeometricFigure
+   public class Circle : IGeometricFigure
     {
-        int Radius { get; set; }
+        double Radius { get; set; }
         private  string _unitOfMeasurement;
         private  string _name;
         private  double _area;
@@ -38,7 +38,7 @@ namespace GeometricFigure
             set { _perimeter = value; } 
         }
 
-        public Circle(int radius, string unitOfMeasurement)
+        public Circle(double radius, string unitOfMeasurement)
         {
             this._name = "Circle";
             this.Radius = radius;

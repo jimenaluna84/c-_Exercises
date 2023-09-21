@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 
-namespace GeometricFigure
+
+namespace GeometricFigureExercise
 {
     class Principal
     {

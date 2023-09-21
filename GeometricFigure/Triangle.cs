@@ -4,21 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeometricFigure
+
+namespace GeometricFigureExercise
 {
-    class Triangle : GeometricFigure
+    public class Triangle : GeometricFigure
     {
 
         double _baseLength { get; set; }
         double _height { get; set; }
-        double BaseLength {
+       public double BaseLength {
             get => _baseLength;
             set
             {
                 _baseLength = value;
             }
         }
-        double Height
+       public double Height
         {
             get => _height;
             set
