@@ -1,4 +1,4 @@
-﻿namespace GeometricFigure
+﻿namespace GeometricFigureExercise
 {
     public abstract class GeometricFigure: IGeometricFigure
     {

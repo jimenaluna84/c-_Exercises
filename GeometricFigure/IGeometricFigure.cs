@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GeometricFigure
+namespace GeometricFigureExercise
 {
     public interface IGeometricFigure
     {

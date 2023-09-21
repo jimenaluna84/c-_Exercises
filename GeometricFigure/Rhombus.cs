@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeometricFigure
+namespace GeometricFigureExercise
 {
-    class Rhombus : GeometricFigure
+     public class Rhombus : GeometricFigure
     {
         public double MajorDiagonal { get; set; }
         public double MinorDiagonal { get; set; }
-        public Rhombus(int MajorDiagonal, int MinorDiagonal, string UnitOfMeasurement)
+        public Rhombus(double MajorDiagonal, double MinorDiagonal, string UnitOfMeasurement)
         : base("Rhombus", Convert.ToString(UnitOfMeasurement))
         {
             this.MajorDiagonal = MajorDiagonal;

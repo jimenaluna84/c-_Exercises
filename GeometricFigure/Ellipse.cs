@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GeometricFigure
+namespace GeometricFigureExercise
 {
-    class Ellipse : IGeometricFigure
+   public class Ellipse : IGeometricFigure
     {
         double RadiusMajorAxis { get; set; }
         double RadiusMinorAxis { get; set; }
@@ -38,7 +38,7 @@ namespace GeometricFigure
         {
             get
             {
-                return Convert.ToInt32(2 * Math.PI * Math.Sqrt((RadiusMajorAxis * RadiusMajorAxis + RadiusMinorAxis * RadiusMinorAxis) / 2));
+                return 2 * Math.PI * Math.Sqrt((RadiusMajorAxis * RadiusMajorAxis + RadiusMinorAxis * RadiusMinorAxis) / 2);
             }
             set { _perimeter = value; }
         }
