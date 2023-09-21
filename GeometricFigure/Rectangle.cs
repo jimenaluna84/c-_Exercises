@@ -21,11 +21,7 @@ namespace GeometricFigureExercise
             get
             {
                 double result = 0;
-                if (this.Width < 0 || this.Height < 0)
-                {
-                    Console.WriteLine("El perímetro no puede ser negativo.");
-                }
-                else
+                if (ConsoleViewManager.AreValid(Width, Height))
                 {
                     result = (2 * this.Width) + (2 * this.Height);
                 }
@@ -38,12 +34,8 @@ namespace GeometricFigureExercise
             get
             {
                 double result = 0;
-                if (this.Width < 0 || this.Height < 0)
-                {
-                    Console.WriteLine("El área no puede ser negativa.");
-                }
-                else
-                {
+                if (ConsoleViewManager.AreValid(Width, Height))
+                { 
                     result = this.Width * this.Height;
                 }
                 return result;
