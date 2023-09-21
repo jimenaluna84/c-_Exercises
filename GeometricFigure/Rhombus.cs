@@ -23,12 +23,8 @@ namespace GeometricFigureExercise
             get
             {
                 double result = 0;
-                if (MajorDiagonal < 0 || MinorDiagonal < 0)
-                {
-                    Console.WriteLine("The Area should not negative.");
-                }
-                else
-                {
+                if (ConsoleViewManager.AreValid(MajorDiagonal, MinorDiagonal))
+                { 
                     double Side1 = Math.Pow(((MajorDiagonal) / 2), 2);
                     double Side2 = Math.Pow(((MinorDiagonal) / 2), 2);
                     result = 4 * (Math.Sqrt(Side1 + Side2));
@@ -42,11 +38,7 @@ namespace GeometricFigureExercise
             get
             {
                 double result = 0;
-                if (MajorDiagonal < 0 || MinorDiagonal < 0)
-                {
-                    Console.WriteLine("The Area should not negative.");
-                }
-                else
+                if (ConsoleViewManager.AreValid(MajorDiagonal, MinorDiagonal))
                 {
                     result = (MajorDiagonal * MinorDiagonal) / 2;
                 }
