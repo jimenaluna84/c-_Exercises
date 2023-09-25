@@ -30,7 +30,9 @@ namespace GeometricFigureExercise
                     result = 4 * (Math.Sqrt(Side1 + Side2));
                 }
                 return result;
+
             }
+            protected set { }
 
         }
         public override double Area
@@ -44,7 +46,7 @@ namespace GeometricFigureExercise
                 }
                 return result;
             }
-
+            protected set { }
 
         }
 

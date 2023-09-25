@@ -9,20 +9,14 @@ namespace GeometricFigureExercise
 {
     public class Square : GeometricFigure
     {
-        private double _sideLength;
-        public double SideLength
-        {
-            get => _sideLength;
-            set
-            {
-                _sideLength = value;
-            }
-        }
+      
+        public double SideLength { get; set; }
+   
 
         public Square(double SideLength, string UnitOfMeasurement)
         : base("Square", Convert.ToString(UnitOfMeasurement))
         {
-            this._sideLength = SideLength;
+            this.SideLength = SideLength;
         }
 
        
@@ -31,13 +25,14 @@ namespace GeometricFigureExercise
             get
             {
                 double result = 0;
-                if (ConsoleViewManager.IsValid(_sideLength))
+                if (ConsoleViewManager.IsValid(SideLength))
                 {
-                    result = 4 * _sideLength;
+                    result = 4 * SideLength;
                 }
                 return result;
             }
-           
+            protected set { }
+
 
         }
         public override double Area
@@ -45,12 +40,13 @@ namespace GeometricFigureExercise
             get
             {
                 double result = 0;
-                if (ConsoleViewManager.IsValid(_sideLength))
+                if (ConsoleViewManager.IsValid(SideLength))
                 {
-                    result = _sideLength * _sideLength;
+                    result = SideLength * SideLength;
                 }
                 return result;
             }
+            protected set { }
 
 
         }
