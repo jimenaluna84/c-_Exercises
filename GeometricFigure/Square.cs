@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,9 @@ namespace GeometricFigureExercise
         public Square(double SideLength, string UnitOfMeasurement)
         : base("Square", Convert.ToString(UnitOfMeasurement))
         {
+            if (SideLength <= 0)
+                throw new ArgumentException("E.", nameof(SideLength));
+
             this.SideLength = SideLength;
         }
 
