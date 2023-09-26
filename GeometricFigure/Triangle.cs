@@ -10,55 +10,46 @@ namespace GeometricFigureExercise
     public class Triangle : GeometricFigure
     {
 
-        double _baseLength { get; set; }
-        double _height { get; set; }
-       public double BaseLength {
-            get => _baseLength;
-            set
-            {
-                _baseLength = value;
-            }
-        }
-       public double Height
-        {
-            get => _height;
-            set
-            {
-                _height = value;
-            }
-        }
+       
+       public double BaseLength { get; set;  }
+       public double Height { get; set; }
+        
         public override double Perimeter
         {
             get
             {
                 double result = 0;
-                if (ConsoleViewManager.AreValid(_baseLength, _height))
+                if (ConsoleViewManager.AreValid(BaseLength, Height))
                 {
-                    double Side1 = Math.Pow(_baseLength, 2);
-                    double Side2 = Math.Pow(_height, 2);
-                    result = _baseLength + _height + Math.Sqrt(Side1 + Side2);
+                    double Side1 = Math.Pow(BaseLength, 2);
+                    double Side2 = Math.Pow(Height, 2);
+                    result = BaseLength + Height + Math.Sqrt(Side1 + Side2);
                 }
                 return result;
             }
-            
+
+            protected set { }
+
         }
         public override double Area
         {
             get
             {
                 double result = 0;
-                if (ConsoleViewManager.AreValid(_baseLength, _height))
+                if (ConsoleViewManager.AreValid(BaseLength, Height))
                     {
-                    result = (_baseLength * _height) / 2;
+                    result = (BaseLength * Height) / 2;
                 }
                 return result;
             }
+
+            protected set { }
         }
         public Triangle(double BaseLength, double Height, string UnitOfMeasurement)
         : base("Triangle", Convert.ToString(UnitOfMeasurement))
         {
-            this._baseLength = BaseLength;
-            this._height = Height;
+            this.BaseLength = BaseLength;
+            this.Height = Height;
 
         }
           

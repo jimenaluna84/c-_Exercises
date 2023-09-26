@@ -36,12 +36,15 @@ namespace GeometricFigureExercise
 
             Circle circle = new(20, "cm");
             ConsoleViewManager.DisplayFigureInfo(circle);
-            circle.ModifyData(8, "cm");
+            circle.ModifyRadius(8);
+            circle.ModifyUnitOfMeasurement("mm");
             ConsoleViewManager.DisplayFigureInfo(circle);
             
             Ellipse ellipse = new(20,15, "cm");
             ConsoleViewManager.DisplayFigureInfo(ellipse);
-            ellipse.ModifyData(8,6, "cm");
+            ellipse.ModifyRadiusMajorAxis(8);
+            ellipse.ModifyRadiusMinorAxis (6);
+            ellipse.ModifyUnitOfMeasurement ("mm");
             ConsoleViewManager.DisplayFigureInfo(ellipse);
 
         }

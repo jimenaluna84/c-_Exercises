@@ -7,52 +7,41 @@ using System.Threading.Tasks;
 
 namespace GeometricFigureExercise
 {
-   public class Circle : IGeometricFigure
+   public class Circle : GeometricFigure
     {
-        double Radius { get; set; }
-        private  string _unitOfMeasurement;
-        private  string _name;
-        private  double _area;
-        private  double _perimeter;
-        public string UnitOfMeasurement
-        {
-            get { return _unitOfMeasurement; }
-            set { _unitOfMeasurement = value; }
+        private double Radius { get; set; }
+       
+       
+        public override double Area{
+            get { return 2 * Math.PI * Radius; }
+            protected set { }
+
         }
-        public string GeometricFigureName
-        {
-            get { return _name; }
-            set { _name = value; } 
-        }
-        public  double Area { 
-            get{
-                return _area = 2 * Math.PI * Radius;
-              } 
-            set { _area = value; } 
-        }
-        public  double Perimeter {
-            get
-            {
-                return _perimeter = Math.PI * Math.Pow(Radius, 2);
-            }
-            set { _perimeter = value; } 
+        public override double Perimeter {
+            get { return Math.PI * Math.Pow(Radius, 2); }
+            protected set { }  
         }
 
-        public Circle(double radius, string unitOfMeasurement)
+        public Circle(double radius, string UnitOfMeasurement)
+            :base("Circle", Convert.ToString(UnitOfMeasurement))
         {
-            this._name = "Circle";
             this.Radius = radius;
-            this._unitOfMeasurement = unitOfMeasurement;
+           
         }
         public  double CalculateDiameter()
         {
             double Diameter = 2 * Radius;
             return Diameter;
         }
-        public void ModifyData(int Radius, string UnitOfMeasurement)
+        public void ModifyRadius(double Radius)
         {
             this.Radius = Radius;
-            this._unitOfMeasurement = UnitOfMeasurement;
+         
+        }
+        public void ModifyUnitOfMeasurement(string UnitOfMeasurement)
+        {
+            this.UnitOfMeasurement = UnitOfMeasurement;
+
         }
 
     }

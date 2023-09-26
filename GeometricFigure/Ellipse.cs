@@ -6,55 +6,50 @@ using System.Threading.Tasks;
 
 namespace GeometricFigureExercise
 {
-   public class Ellipse : IGeometricFigure
+    public class Ellipse : GeometricFigure
     {
         double RadiusMajorAxis { get; set; }
         double RadiusMinorAxis { get; set; }
 
-        private string _unitOfMeasurement;
-        private string _name;
-        private double _area;
-        private double _perimeter;
 
-        public string UnitOfMeasurement
-        {
-            get { return _unitOfMeasurement; }
-            set { _unitOfMeasurement = value; }
-        }
-        public string GeometricFigureName
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
-        public double Area
+        public override double Area
         {
             get
             {
-                return _area = Math.PI * RadiusMajorAxis * RadiusMinorAxis;
+                return Math.PI * RadiusMajorAxis * RadiusMinorAxis;
             }
-            set { _area = value; }
+            protected set { }
         }
-        public double Perimeter
+        public override double Perimeter
         {
             get
             {
                 return 2 * Math.PI * Math.Sqrt((RadiusMajorAxis * RadiusMajorAxis + RadiusMinorAxis * RadiusMinorAxis) / 2);
             }
-            set { _perimeter = value; }
+            protected set { }
         }
-        public Ellipse(double RadiusMajorAxis, double RadiusMinorAxis, string unitOfMeasurement)
+        public Ellipse(double RadiusMajorAxis, double RadiusMinorAxis, string UnitOfMeasurement)
+             : base("Ellipse", Convert.ToString(UnitOfMeasurement))
         {
-            this.GeometricFigureName = "Ellipse";
             this.RadiusMajorAxis = RadiusMajorAxis;
             this.RadiusMinorAxis = RadiusMinorAxis;
-            this.UnitOfMeasurement = unitOfMeasurement;
+
         }
-        public void ModifyData(int radiusMajorAxis, int radiusMinorAxis, string unitOfMeasurement)
+        public void ModifyRadiusMajorAxis(double radiusMajorAxis)
         {
             this.RadiusMajorAxis = radiusMajorAxis;
-            this.RadiusMinorAxis = radiusMinorAxis;
-            this.UnitOfMeasurement = unitOfMeasurement;
         }
+        public void ModifyRadiusMinorAxis(double radiusMinorAxis)
+        {
+            this.RadiusMinorAxis = radiusMinorAxis;
+
+        }
+        public void ModifyUnitOfMeasurement(string UnitOfMeasurement)
+        {
+            this.UnitOfMeasurement = UnitOfMeasurement;
+
+        }
+
 
     }
 

@@ -27,7 +27,8 @@ namespace GeometricFigureExercise
                 }
                 return result;
             }
-            
+            protected set { }
+
         }
         public override double Area
         {
@@ -40,6 +41,7 @@ namespace GeometricFigureExercise
                 }
                 return result;
             }
+            protected set { }
         }
         public void ModifyWidth(double Width)
         {
